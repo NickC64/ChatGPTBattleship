@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class GridStatus {
+enum GridStatus {
+    EMPTY, SHIP, HIT, MISS
 }

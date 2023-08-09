@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Player {
+interface Player {
+    String getName();
+    void playTurn(GridStatus[][] opponentBoard, GridStatus[][] playerBoard);
 }
