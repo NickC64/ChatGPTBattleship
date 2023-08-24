@@ -8,10 +8,13 @@ class ShipPlacementStrategyTest {
     GridSquareStatus[][] getTestBoard() {
         ShipPlacementStrategy placementStrategy = new RandomShipPlacementStrategy();
         GridSquareStatus[][] board = new GridSquareStatus[10][10];
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+
+                board[i][j] = GridSquareStatus.EMPTY;
+            }
+        }
         placementStrategy.placeShips(board);
-        board[0][0] = GridSquareStatus.HIT;
-        board[0][1] = GridSquareStatus.EMPTY;
-        board[0][2] = GridSquareStatus.SHIP;
         return board;
     }
 
