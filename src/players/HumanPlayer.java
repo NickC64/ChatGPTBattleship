@@ -1,5 +1,13 @@
+package players;
 
-class HumanPlayer implements Player {
+import UI.BattleshipView;
+import game.BattleshipModel;
+import game.GridSquareStatus;
+
+/**
+ * An interface based method of playing turns, designed for human players
+ */
+public class HumanPlayer implements Player {
     private String name;
     private BattleshipModel model;
     private BattleshipView view;
@@ -10,12 +18,17 @@ class HumanPlayer implements Player {
         this.view = view;
     }
 
-
     public String getName() {
         return name;
     }
 
-    public void playTurn(GridStatus[][] opponentBoard, GridStatus[][] playerBoard) {
+    /**
+     * Guides the human player through the process of playing 1 turn
+     * @param opponentBoard the board of the opponent
+     * @param playerBoard the board of the player
+     * @return whether a ship was hit during this turn
+     */
+    public boolean playTurn(GridSquareStatus[][] opponentBoard, GridSquareStatus[][] playerBoard) {
         view.flushView();
         view.showTurnMessage(name);
 
@@ -32,13 +45,15 @@ class HumanPlayer implements Player {
                 continue;
             }
 
-            // Assume BattleshipModel methods like receivePlayerGuess are available
+            // Assume game.BattleshipModel methods like receivePlayerGuess are available
             if (model.checkIfAlreadyAttempted(row, col, opponentBoard)) {
                 view.showAlreadyGuessedMessage(name);
                 continue;
             }
+            boolean hit = false;
             if (model.checkIfHit(row, col, opponentBoard)){
                 view.showHitMessage(name);
+                hit = true;
             } else{
                 view.showMissMessage(name);
             }
@@ -48,8 +63,7 @@ class HumanPlayer implements Player {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            break;
-
+            return hit;
         }
     }
 

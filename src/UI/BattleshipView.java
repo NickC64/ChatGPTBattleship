@@ -1,8 +1,15 @@
-interface BattleshipView {
+package UI;
+
+import game.GridSquareStatus;
+
+/**
+ * UI methods for the operation of the game and to facilitate human moves
+ */
+public interface BattleshipView {
 
     void flushView();
-    void printBoard(GridStatus[][] board);
-    void printAttemptsBoard(GridStatus[][] board);
+    void printBoard(GridSquareStatus[][] board);
+    void printAttemptsBoard(GridSquareStatus[][] board);
     void showWinMessage(String playerName);
     void showTurnMessage(String playerName);
     void showAlreadyGuessedMessage(String playerName);

@@ -1,6 +1,14 @@
+package UI;
+
+import game.GridSquareStatus;
+
 import java.util.Scanner;
 
-class BattleshipConsoleView implements BattleshipView {
+
+/**
+ * A terminal based implementation of the UI
+ */
+public class BattleshipConsoleView implements BattleshipView {
 
     private Scanner scanner = new Scanner(System.in);
 
@@ -12,8 +20,12 @@ class BattleshipConsoleView implements BattleshipView {
         System.out.flush();
     }
 
+    /**
+     * Takes advantage of the monospaced text of the terminal to print a console version of the player's board
+     * @param board the board to print
+     */
     @Override
-    public void printBoard(GridStatus[][] board) {
+    public void printBoard(GridSquareStatus[][] board) {
         System.out.println("Your board");
         System.out.println("  A B C D E F G H I J");
         for (int i = 0; i < board.length; i++) {
@@ -26,8 +38,12 @@ class BattleshipConsoleView implements BattleshipView {
         System.out.println();
     }
 
+    /**
+     * Takes advantage of the monospaced text of the terminal to print a console version of the moves the player made
+     * @param board the board to print
+     */
     @Override
-    public void printAttemptsBoard(GridStatus[][] board) {
+    public void printAttemptsBoard(GridSquareStatus[][] board) {
         System.out.println("Your attempts");
         System.out.println("  A B C D E F G H I J");
         for (int i = 0; i < board.length; i++) {
@@ -40,7 +56,7 @@ class BattleshipConsoleView implements BattleshipView {
         System.out.println();
     }
 
-    private String getSymbol(GridStatus status) {
+    private String getSymbol(GridSquareStatus status) {
         switch (status) {
             case EMPTY:
                 return ".";
@@ -55,7 +71,7 @@ class BattleshipConsoleView implements BattleshipView {
         }
     }
 
-    private String getSymbolAttempts(GridStatus status) {
+    private String getSymbolAttempts(GridSquareStatus status) {
         switch (status) {
             case EMPTY, SHIP:
                 return ".";
@@ -104,13 +120,4 @@ class BattleshipConsoleView implements BattleshipView {
         System.out.println("Invalid input. Please enter valid coordinates.");
     }
 
-    public void showPlayerTypeMenu() {
-        System.out.println("Select player type:");
-        System.out.println("1. Human Player");
-        System.out.println("2. Computer Player");
-    }
-
-    public void showInvalidPlayerTypeMessage() {
-        System.out.println("Invalid selection. Please choose 1 for Human Player or 2 for Computer Player.");
-    }
 }

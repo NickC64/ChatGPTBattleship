@@ -4,25 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ef6e0b2-e56b-4d00-a725-6cc7d3095234" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChatGPTBattleship.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BattleshipConsoleView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BattleshipGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BattleshipModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BattleshipPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BattleshipView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GridPlacementStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GridStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HumanPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HumanShipPlacementStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RandomShipPlacementStrategy.java" afterDir="false" />
+    <list default="true" id="2ef6e0b2-e56b-4d00-a725-6cc7d3095234" name="Changes" comment="small typo fixed">
+      <change afterPath="$PROJECT_DIR$/src/game/GridSquareStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/ShipPlacementStrategyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatGPTBattleship.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatGPTBattleship.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleshipConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/BattleshipConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleshipGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/BattleshipGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleshipModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/BattleshipModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleshipPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/BattleshipPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleshipView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/BattleshipView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GridStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/players/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HumanShipPlacementStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RandomShipPlacementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/RandomShipPlacementStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShipPlacementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/ShipPlacementStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -52,19 +51,38 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/players" />
+      <recent name="$PROJECT_DIR$/src/UI" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="BattleshipGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BattleshipGame" />
+    <configuration name="game.BattleshipGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.BattleshipGame" />
       <module name="ChatGPTBattleship" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,7 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BattleshipGame" />
+        <item itemvalue="Application.game.BattleshipGame" />
       </list>
     </recent_temporary>
   </component>
@@ -84,8 +102,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691536834504</updated>
-      <workItem from="1691536835805" duration="10267000" />
+      <workItem from="1691536835805" duration="10790000" />
+      <workItem from="1692131674476" duration="494000" />
+      <workItem from="1692870850921" duration="4591000" />
     </task>
+    <task id="LOCAL-00001" summary="small typo fixed">
+      <created>1691556678392</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691556678392</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,5 +129,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="small typo fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="small typo fixed" />
   </component>
 </project>
